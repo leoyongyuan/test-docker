@@ -5,5 +5,5 @@ WORKDIR /usr/src
 FROM base as prod
 ADD . /usr/src
 RUN npm install && npm run build
-RUN cd server npm install
-CMD node server/app.js
+RUN cd ./server && npm install
+CMD node ./server/app.js
