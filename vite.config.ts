@@ -12,6 +12,6 @@ export default defineConfig({
   //     ]
   //   }
   // },
-  base: '/test-docker/',
+  // base: '/test-docker/',
   plugins: [react()],
 })
