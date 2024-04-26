@@ -5,3 +5,4 @@ WORKDIR /usr/src
 FROM base as prod
 ADD . /usr/src
 RUN npm install && npm run build
+CMD node app.js
