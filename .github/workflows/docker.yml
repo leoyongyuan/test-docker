@@ -32,7 +32,6 @@ jobs:
         name: Get tag version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-
       - 
         name: Print tag version
         run: echo ${{ steps.get_version.outputs.VERSION }}
@@ -46,3 +45,4 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
           build-args: |
             "TEST_TOKEN=${{ 123456 }}"
+            "TAG_VERSION=${{ steps.get_version.outputs.VERSION }}"
