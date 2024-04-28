@@ -21,4 +21,5 @@ EXPOSE 3000
 WORKDIR /usr/src
 COPY --from=base /usr/src/dist /usr/src/dist
 COPY --from=base /usr/src/server /usr/src/server
+RUN cd ./server && npm install
 CMD node ./server/app.js
