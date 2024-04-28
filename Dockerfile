@@ -21,7 +21,7 @@ EXPOSE 3000
 WORKDIR /usr/src
 ARG TEST_TOKEN
 ARG TAG_VERSION
-ENV TAG_VERSION_ENV=TAG_VERSION 
+ENV TAG_VERSION_ENV=$TAG_VERSION
 RUN echo "测试环境变量: $TEST_TOKEN $TAG_VERSION_ENV"
 COPY --from=base /usr/src/dist /usr/src/dist
 COPY --from=base /usr/src/server /usr/src/server
