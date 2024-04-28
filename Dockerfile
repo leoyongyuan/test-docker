@@ -10,7 +10,7 @@
 # CMD node ./server/app.js
 
 ARG NODE_VERSION=16.20.2
-FROM node:${NODE_VERSION}-alpines as base
+FROM node:${NODE_VERSION}-alpine as base
 EXPOSE 3000
 WORKDIR /usr/src
 RUN npm install && npm run build
