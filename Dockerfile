@@ -17,5 +17,5 @@ RUN npm install && npm run build
 
 FROM node:${NODE_VERSION}-alpine as prod
 ADD . /usr/src
-COPY /usr/src/dist /usr/src
+COPY ./usr/src/dist /usr/src
 CMD node ./server/app.js
