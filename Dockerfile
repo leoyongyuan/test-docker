@@ -16,6 +16,6 @@ WORKDIR /usr/src
 RUN npm install && npm run build
 
 FROM node:${NODE_VERSION}-alpine as prod
-ADD . /usr/src
+WORKDIR /usr/src
 COPY --from=base /usr/src/dist /usr/src/dist
 CMD node ./server/app.js
