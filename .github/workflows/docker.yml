@@ -28,6 +28,14 @@ jobs:
       #     context: .
       #     target: test
       #     load: true
+      - 
+        name: Get tag version
+        id: tag
+        run: echo "::set-output name=version::$(echo ${GITHUB_REF#refs/tags/})"
+
+      - 
+        name: Print tag version
+        run: echo "Tag version is ${{ steps.tag.outputs.version }}"
       -
         name: Build and push
         uses: docker/build-push-action@v5
