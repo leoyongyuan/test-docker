@@ -36,3 +36,5 @@ jobs:
           push: true
           target: prod
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          build-args: |
+            "TEST_TOKEN=${{ secrets.TEST_TOKEN }}"
