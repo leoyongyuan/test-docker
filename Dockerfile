@@ -11,13 +11,10 @@
 
 ARG NODE_VERSION=16.20.2
 FROM node:${NODE_VERSION}-alpine as base
-ARG TEST_TOKEN
 EXPOSE 3000
 WORKDIR /usr/src
 ADD . /usr/src
 RUN npm install && npm run build
-RUN echo "测试环境变量: $TEST_TOKEN $NODE_VERSION"
-
 
 FROM node:${NODE_VERSION}-alpine as prod
 EXPOSE 3000
