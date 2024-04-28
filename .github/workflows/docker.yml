@@ -38,4 +38,5 @@ jobs:
           push: true
           target: prod
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
-          TEST_TOKEN: "123456"
+          build-args: "123456"
+          args: The ${{ secrets.TEST_TOKEN }} event triggered this step."
