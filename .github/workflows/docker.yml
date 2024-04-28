@@ -35,6 +35,7 @@ jobs:
       - 
         name: Print tag version
         run: echo ${{ steps.get_version.outputs.VERSION }}
+        run: echo ${{ github.ref }}
       -
         name: Build and push
         uses: docker/build-push-action@v5
