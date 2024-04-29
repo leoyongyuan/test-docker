@@ -9,6 +9,6 @@ export default {
 	bracketSpacing: true,
 	bracketSameLine: false,
 	arrowParens: "always",
-	endOfLine: "auto",
+	endOfLine: "lf",
 	singleAttributePerLine: false,
 };
