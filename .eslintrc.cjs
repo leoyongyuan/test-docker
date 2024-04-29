@@ -10,6 +10,7 @@ module.exports = {
 		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
 		"eslint-config-prettier",
+		"plugin:react/jsx-runtime",
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
