@@ -11,4 +11,4 @@ export default {
 	arrowParens: "always",
 	endOfLine: "lf",
 	singleAttributePerLine: false,
-}
+};
